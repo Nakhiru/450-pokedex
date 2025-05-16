@@ -28,8 +28,8 @@ Install the following:
 Clone this repo and install dependencies:
 
 ```bash
-git clone <your-repo-url>
-cd <your-project-folder>
+git clone https://github.com/Nakhiru/450-pokedex.git
+cd 450-pokedex
 npm install
 ```
 
