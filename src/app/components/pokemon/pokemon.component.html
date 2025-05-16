@@ -1,0 +1,41 @@
+@if (pokemon) {
+    <div class="details">
+        <h2>{{ pokemon.name | titlecase }}</h2>
+
+        <div class="sprite-display">
+            <img [src]="currentSprite" [alt]="pokemon.name" />
+        </div>
+
+        <div class="sprite-selector">
+            <div class="horizontal">
+                <button class="simple-button" (click)="setFront()" [disabled]="showFront">Front</button>
+                <button class="simple-button" (click)="setBack()" [disabled]="!showFront">Back</button>
+            </div>
+            <div class="toggle-button">
+                <span class="toggle-label">Shiny</span>
+                <label class="switch">
+                <input type="checkbox" id="shiny-toggle" (click)="toggleShiny()">
+                <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <ul class="types">
+            @for (type of pokemon.types; track type) {
+                <li class="type" [style.background-color]="type.color">{{ type.name }}</li>
+            }
+        </ul>
+
+        <ul class="stats">
+            @for (stat of statsList; track stat) {
+                <li class="stat"><strong>{{ stat.label }}:</strong> {{ stat.value }}</li>
+            }
+        </ul>
+
+        <div class="nav-buttons">
+            <button class="simple-button" (click)="goToPrevious()" [disabled]="pokemonId === MIN_ID">Previous</button>
+            <button class="simple-button" (click)="goToRandom()">Random</button>
+            <button class="simple-button" (click)="goToNext()" [disabled]="pokemonId === MAX_ID">Next</button>
+        </div>
+    </div>
+}

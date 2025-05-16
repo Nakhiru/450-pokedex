@@ -1,0 +1,19 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--background);
+
+    .content {
+        border-radius: 20px;
+        padding: 30px 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+        width: 350px;
+        height: 630px;
+        background-color: #FFF;
+    }
+}
+
+
