@@ -8,8 +8,8 @@
 
         <div class="sprite-selector">
             <div class="horizontal">
-                <button class="simple-button" (click)="setFront()" [disabled]="showFront">Front</button>
-                <button class="simple-button" (click)="setBack()" [disabled]="!showFront">Back</button>
+                <button class="simple-button" id="front" (click)="setFront()" [disabled]="showFront">Front</button>
+                <button class="simple-button" id="back" (click)="setBack()" [disabled]="!showFront">Back</button>
             </div>
             <div class="toggle-button">
                 <span class="toggle-label">Shiny</span>
@@ -33,9 +33,9 @@
         </ul>
 
         <div class="nav-buttons">
-            <button class="simple-button" (click)="goToPrevious()" [disabled]="pokemonId === MIN_ID">Previous</button>
-            <button class="simple-button" (click)="goToRandom()">Random</button>
-            <button class="simple-button" (click)="goToNext()" [disabled]="pokemonId === MAX_ID">Next</button>
+            <button class="simple-button" id="previous" (click)="goToPrevious()" [disabled]="pokemonId === MIN_ID">Previous</button>
+            <button class="simple-button" id="random" (click)="goToRandom()">Random</button>
+            <button class="simple-button" id="next" (click)="goToNext()" [disabled]="pokemonId === MAX_ID">Next</button>
         </div>
     </div>
 }
