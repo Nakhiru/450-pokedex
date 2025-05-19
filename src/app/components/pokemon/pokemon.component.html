@@ -1,9 +1,9 @@
 @if (pokemon) {
     <div class="details">
-        <h2>{{ pokemon.name | titlecase }}</h2>
+        <h2 id="pokemon-name">{{ pokemon.name | titlecase }}</h2>
 
         <div class="sprite-display">
-            <img [src]="currentSprite" [alt]="pokemon.name" />
+            <img id="pokemon-sprite" [src]="currentSprite" [alt]="pokemon.name" />
         </div>
 
         <div class="sprite-selector">
