@@ -73,7 +73,34 @@ Here explain how to unit and integration test
 
 ### E2E Testing
 
-Here exmplain how to E2E test
+Cypress is used for end-to-end (E2E) testing in this project. Follow the steps below to get started:
+
+Install Cypress into the project
+
+```bash
+npm install cypress --save-dev
+```
+
+Run this command to open Cypress UI
+
+```bash
+npx cypress open
+```
+
+Then: 
+
+1. Select `E2E Testing`
+2. Choose your preferred browser
+3. Click `Start E2E Testing in ...`
+4. In the Cypress interface, select `pokemon.cy.ts` to run the test suite
+
+---
+
+Or, run this command if you want to automatically run the tests and get a report in the terminal
+
+```bash
+npx cypress run
+```
 
 ---
 
