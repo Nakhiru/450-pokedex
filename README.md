@@ -63,6 +63,20 @@ http://localhost:4200
 
 ---
 
+## 🧪 Run Tests
+
+### Unit and Integration tests
+
+Here explain how to unit and integration test
+
+---
+
+### E2E Testing
+
+Here exmplain how to E2E test
+
+---
+
 ## ❓ FAQs
 
 **Q: Why does visiting `/pokemon/0` or `/pokemon/999` redirect me to `/pokemon/1`?**  
