@@ -81,6 +81,12 @@ Install Cypress into the project
 npm install cypress --save-dev
 ```
 
+Make sure the app is running using:
+
+```bash
+ng serve
+```
+
 Run this command to open Cypress UI
 
 ```bash
