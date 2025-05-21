@@ -44,13 +44,13 @@ describe('PokemonComponent', () => {
     component.isShiny = false;
     expect(component.currentSprite).toBe('fd.png');
 
-    component.isShiny = true;
+    component.toggleShiny();
     expect(component.currentSprite).toBe('fs.png');
 
-    component.showFront = false;
+    component.setBack();
     expect(component.currentSprite).toBe('bs.png');
 
-    component.isShiny = false;
+    component.toggleShiny();
     expect(component.currentSprite).toBe('bd.png');
   });
 });
