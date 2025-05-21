@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
-
 import { PokemonService } from './pokemon.service';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('PokemonService', () => {
   let service: PokemonService;
@@ -9,8 +9,13 @@ describe('PokemonService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [PokemonService, provideHttpClientTesting()]
+      providers: [
+        PokemonService,
+        provideHttpClient(),
+        provideHttpClientTesting()
+      ]
     });
+
     service = TestBed.inject(PokemonService);
     httpMock = TestBed.inject(HttpTestingController);
   });

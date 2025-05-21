@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PokemonComponent } from './pokemon.component';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('PokemonComponent', () => {
   let component: PokemonComponent;
@@ -12,6 +13,7 @@ describe('PokemonComponent', () => {
     await TestBed.configureTestingModule({
       imports: [PokemonComponent],
       providers: [
+        provideHttpClient(),
         { provide: ActivatedRoute, useValue: { paramMap: of({ get: () => "1" }) } }
       ]
     })
