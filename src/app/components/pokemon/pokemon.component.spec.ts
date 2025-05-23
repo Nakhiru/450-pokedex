@@ -1,23 +1,19 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { PokemonComponent } from './pokemon.component';
-import { ActivatedRoute } from '@angular/router';
-import { of } from 'rxjs';
-import { provideHttpClient } from '@angular/common/http';
-
 describe('PokemonComponent', () => {
   let component: PokemonComponent;
   let fixture: ComponentFixture<PokemonComponent>;
+  let routerSpy: jasmine.SpyObj<Router>;
 
   beforeEach(async () => {
+    routerSpy = jasmine.createSpyObj('Router', ['navigate']);
+
     await TestBed.configureTestingModule({
       imports: [PokemonComponent],
       providers: [
         provideHttpClient(),
-        { provide: ActivatedRoute, useValue: { paramMap: of({ get: () => "1" }) } }
+        { provide: ActivatedRoute, useValue: { paramMap: of({ get: () => "1" }) } },
+        { provide: Router, useValue: routerSpy }
       ]
-    })
-      .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PokemonComponent);
     component = fixture.componentInstance;
@@ -50,5 +46,12 @@ describe('PokemonComponent', () => {
 
     component.toggleShiny();
     expect(component.currentSprite).toBe('bd.png');
+  });
+
+
+  it('should navigate to next pokemon when goToNext is called', () => {
+    component.pokemonId = 25;
+    component.goToNext();
+    expect(routerSpy.navigate).toHaveBeenCalledWith(['/pokemon', 26]);
   });
 });
