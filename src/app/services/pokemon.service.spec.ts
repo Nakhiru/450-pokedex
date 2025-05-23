@@ -21,7 +21,7 @@ describe('PokemonService', () => {
   });
 
   afterEach(() => httpMock.verify());
-
+// test unitaire #1
   it("should fetch and transform Pokemon data correctly", () => {
     const mockResponse = {
       id: 25,

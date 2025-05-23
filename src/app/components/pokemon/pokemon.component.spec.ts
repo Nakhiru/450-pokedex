@@ -31,7 +31,7 @@ describe('PokemonComponent', () => {
     fixture.detectChanges();
   });
 
-  
+  // test unitaire #1
   it('should return correct sprite URL based on state', () => {
     component.pokemon = {
       id: 1,
@@ -60,7 +60,7 @@ describe('PokemonComponent', () => {
     expect(component.currentSprite).toBe('bd.png');
   });
 
-  
+  // test d'integration #1
 it('should navigate to next and previous pokemon', () => {
   component.pokemonId = 25;
   component.pokemon = {
@@ -89,7 +89,7 @@ it('should navigate to next and previous pokemon', () => {
   prevButton.nativeElement.click();
   expect(router.navigate).toHaveBeenCalledWith(['/pokemon', 24]);
 });
-
+// test d'integration #2
 it('should toggle sprites correctly (front, back, shiny)', () => {
   component.pokemonId = 25;
   component.pokemon = {
