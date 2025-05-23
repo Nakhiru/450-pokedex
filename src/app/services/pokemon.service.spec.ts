@@ -22,10 +22,6 @@ describe('PokemonService', () => {
 
   afterEach(() => httpMock.verify());
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-
   it("should fetch and transform Pokemon data correctly", () => {
     const mockResponse = {
       id: 25,
