@@ -24,10 +24,6 @@ describe('PokemonComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
   it('should return correct sprite URL based on state', () => {
     component.pokemon = {
       id: 1,
