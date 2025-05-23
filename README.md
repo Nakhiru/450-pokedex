@@ -106,7 +106,7 @@ http://localhost:4200
    - HP, Attack, Defense, and Speed should be extracted from the API's stats array and displayed clearly in the UI.
 5. **Type Color Mapping**
    - Each type should be mapped to a predefined color internally and shown in the UI (e.g., electric → `#F7D02C`).
-6. Testing
+6. **Testing**
    - The implementation is tested and behaves as expected.
 
 ---
