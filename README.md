@@ -133,9 +133,22 @@ This should open [http://localhost:9876](http://localhost:9876) containing the K
 
 ### Integration Tests
 
-TODO: Add integration tests instructions
+Karma and Jasmine are used for the unit tests. Follow the steps below to get started:
 
----
+Make sure the app is running:
+
+```bash
+ng serve
+```
+
+Start the tests in another terminal:
+
+```bash
+ng test
+```
+
+This should open [http://localhost:9876](http://localhost:9876) containing the Karma UI as well as show the tests results.
+
 
 ### E2E Testing
 
