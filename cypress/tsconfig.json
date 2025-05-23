@@ -4,7 +4,14 @@
         "../cypress.config.ts",
         "../node_modules",
         "../cypress",
-        "e2e/*.cy.tsx"
+        "**/*.cy.tsx"
     ],
-    "exclude": []
+    "exclude": [],
+    "files": [
+        "../cypress.config.ts"
+    ],
+    "compilerOptions": {
+        "sourceMap": false,
+        "types": ["cypress"]
+    }
 }
