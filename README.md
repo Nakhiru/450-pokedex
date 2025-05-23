@@ -133,7 +133,7 @@ This should open [http://localhost:9876](http://localhost:9876) containing the K
 
 ### Integration Tests
 
-Karma and Jasmine are used for the unit tests. Follow the steps below to get started:
+Karma and Jasmine are used for the integration tests. Follow the steps below to get started:
 
 Make sure the app is running:
 
