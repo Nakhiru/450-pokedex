@@ -5,4 +5,19 @@ export default defineConfig({
     baseUrl: 'http://localhost:4200',
     supportFile: false
   },
+  component: {
+    devServer: {
+      framework: "angular",
+      bundler: "webpack",
+      options: {
+        projectConfig: {
+          root: '',
+          sourceRoot: '',
+          buildOptions: {
+            tsConfig: 'cypress/tsconfig.json',
+          }
+        }
+      }
+    }
+  }
 });
