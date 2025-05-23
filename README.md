@@ -5,6 +5,27 @@ It shows sprites (normal/shiny, front/back), stats, types, and navigating betwee
 
 ---
 
+## Table of Contents
+
+- [📘 Pokémon Viewer – Documentation](#-pokémon-viewer--documentation)
+  - [Table of Contents](#table-of-contents)
+  - [🚀 Quick Start](#-quick-start)
+    - [✅ Prerequisites](#-prerequisites)
+    - [📦 Install the App](#-install-the-app)
+    - [▶️ Run the App](#️-run-the-app)
+  - [🔍 Features](#-features)
+    - [User Story](#user-story)
+      - [Acceptance Criteria](#acceptance-criteria)
+  - [🧪 Run Tests](#-run-tests)
+    - [Unit Tests](#unit-tests)
+    - [Integration Tests](#integration-tests)
+    - [E2E Testing](#e2e-testing)
+  - [Tech Stack](#tech-stack)
+  - [❓ FAQs](#-faqs)
+  - [🧑‍💻 Need Help?](#-need-help)
+
+---
+
 ## 🚀 Quick Start
 
 ### ✅ Prerequisites
