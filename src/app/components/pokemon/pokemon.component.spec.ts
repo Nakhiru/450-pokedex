@@ -1,3 +1,10 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { PokemonComponent } from './pokemon.component';
+import { ActivatedRoute, Router } from '@angular/router';
+import { of } from 'rxjs';
+import { provideHttpClient } from '@angular/common/http';
+
 describe('PokemonComponent', () => {
   let component: PokemonComponent;
   let fixture: ComponentFixture<PokemonComponent>;
@@ -20,6 +27,7 @@ describe('PokemonComponent', () => {
     fixture.detectChanges();
   });
 
+  // ✅ Test 1
   it('should return correct sprite URL based on state', () => {
     component.pokemon = {
       id: 1,
@@ -48,10 +56,11 @@ describe('PokemonComponent', () => {
     expect(component.currentSprite).toBe('bd.png');
   });
 
-
   it('should navigate to next pokemon when goToNext is called', () => {
+    console.log('⚠️ TEST GO TO NEXT EXECUTED');
     component.pokemonId = 25;
     component.goToNext();
     expect(routerSpy.navigate).toHaveBeenCalledWith(['/pokemon', 26]);
   });
+  
 });
