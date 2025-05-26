@@ -104,40 +104,40 @@ describe('PokemonComponent', () => {
 
   // test d'integration #2 
   it('should fetch and set pokemon data and stats list on init', fakeAsync(() => {
-  const mockPokemon = {
-    id: 25, 
-    name: 'pikachu',
-    sprites: {
-      frontDefault: 'fd.png',
-      frontShiny: 'fs.png',
-      backDefault: 'bd.png',
-      backShiny: 'bs.png'
-    },
-    stats: {
-      hp: 35,
-      attack: 55,
-      defense: 30,
-      speed: 90
-    },
-    types: [{ name: 'electric', color: '#FFEA70' }]
-  };
+    const mockPokemon = {
+      id: 25, 
+      name: 'pikachu',
+      sprites: {
+        frontDefault: 'fd.png',
+        frontShiny: 'fs.png',
+        backDefault: 'bd.png',
+        backShiny: 'bs.png'
+      },
+      stats: {
+        hp: 35,
+        attack: 55,
+        defense: 30,
+        speed: 90
+      },
+      types: [{ name: 'electric', color: '#FFEA70' }]
+    };
 
-  mockPokemonService.getPokemon.and.returnValue(of(mockPokemon));
+    mockPokemonService.getPokemon.and.returnValue(of(mockPokemon));
 
-  component.ngOnInit();
-  tick(); 
+    component.ngOnInit();
+    tick(); 
 
-  expect(component.pokemonId).toBe(25);
-  expect(mockPokemonService.getPokemon).toHaveBeenCalledWith(25);
-  expect(component.pokemon).toEqual(mockPokemon);
-  expect(component.statsList).toEqual([
-    { label: 'HP', value: 35 },
-    { label: 'Attack', value: 55 },
-    { label: 'Defense', value: 30 },
-    { label: 'Speed', value: 90 }
-  ]);
-  expect(component.showFront).toBeTrue();
-  expect(navigateSpy).not.toHaveBeenCalled();
-}));
+    expect(component.pokemonId).toBe(25);
+    expect(mockPokemonService.getPokemon).toHaveBeenCalledWith(25);
+    expect(component.pokemon).toEqual(mockPokemon);
+    expect(component.statsList).toEqual([
+      { label: 'HP', value: 35 },
+      { label: 'Attack', value: 55 },
+      { label: 'Defense', value: 30 },
+      { label: 'Speed', value: 90 }
+    ]);
+    expect(component.showFront).toBeTrue();
+    expect(navigateSpy).not.toHaveBeenCalled();
+  }));
 
 });
