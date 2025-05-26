@@ -215,6 +215,7 @@ Ensure:
 - You are using Node.js version `>= 18`
 - You installed Angular CLI globally with `npm install -g @angular/cli`
 - You ran `npm install` before `ng serve`
+- If the Cypress UI fails to open with `npx cypress open`, simply run these tests using `npx cypress run`
 
 If you're still stuck, ask us ! 😊
 
